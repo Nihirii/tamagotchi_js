@@ -1,0 +1,144 @@
+
+html {
+  height: 100%;
+  width: 100%;
+}
+html body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: pink;
+  font-family: 'Anonymous Pro', monospace;
+}
+.tama-container {
+  width: 800px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% 60% 50% 50% / 70% 70% 40% 40%;
+  border: 3px solid #1c446b;
+  margin-top: 30px;
+  background-image: url("../resources/img/tamabg.jpg");
+}
+.tama-container * {
+  z-index: 999;
+}
+.tama-container .screen {
+  margin-top: 100px;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  padding: 1em;
+  border: 3px solid #1c446b;
+  border-radius: 10px;
+}
+.tama-container .screen #setup,
+.tama-container .screen #game,
+.tama-container .screen #dead {
+  height: 100%;
+  display: none;
+}
+.tama-container .screen #setup.visible,
+.tama-container .screen #game.visible,
+.tama-container .screen #dead.visible {
+  display: flex;
+}
+.tama-container .screen #setup {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tama-container .screen #setup .rules {
+  text-align: center;
+}
+.tama-container .screen #setup .rules.title {
+  font-size: 1.7em;
+}
+.tama-container .screen #setup .form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.tama-container .screen #setup .form #tama-name {
+  margin-top: 10px;
+  height: 2em;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+.tama-container .screen #setup .form #start-btn {
+  width: 150px;
+  margin-top: 10px;
+  background-color: #c9fcc3;
+}
+.tama-container .screen #game {
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.tama-container .screen #game .bars-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tama-container .screen #game .bars-container progress {
+  width: 150px;
+}
+.tama-container .screen #game .sprite-container {
+  flex: 1;
+}
+.tama-container .screen #game .status-text-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tama-container .screen #game .status-text-container #age {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+.tama-container .screen #dead {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.actions-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  margin-top: 20px;
+}
+.actions-container.special {
+  justify-content: space-around;
+}
+.actions-container.special .action-button .button {
+  background-color: #9cf286;
+  border: 3px solid #027b00;
+}
+.actions-container.special .action-button .button img {
+  color: white;
+  stroke: white;
+  fill: white;
+}
+.actions-container .action-button .button {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: #ff4747;
+  border: 3px solid #870000;
+  padding: 20px;
+  transition: linear 0.03s;
+}
+.actions-container .action-button .button:active {
+  transform: scale(0.9);
+}
