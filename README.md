@@ -1,8 +1,13 @@
-# tamagotchi_js
-A partir du projet tamagotchi en Python que j'ai effectuer je devais recrée le tamagotchi mais cette fois ci en Javascript
-aucun modele n'a etait donnée, chaque tamagotchi est different par eleves/groupe.
+# Tamagotchi JS
 
-On pouvais rajouter quelque chose de specifique en plus des caracteristique de base(manger /dormir/boire/jouer) j'ai decider de rajouter la caracteristique malade qui bloque
-tout les autres caracteristique tant que nous soigner pas le tamagotchi
+Un mini-jeu en JavaScript inspiré des Tamagotchi. Le but est de prendre soin d’un animal virtuel en répondant à ses besoins.
 
-j'ai effectuer ce projet JS en 3H
+## Comment jouer
+
+- Nourris ton Tamagotchi et donne-lui à boire.
+- Fais-le dormir et joue avec lui.
+- S’il tombe malade, soigne-le d’abord. Les autres actions sont bloquées jusqu’à sa guérison.
+
+## Contexte
+
+J’ai réalisé ce projet en trois heures dans le cadre d’un exercice. L’objectif était de recréer en JavaScript un [Tamagotchi que j’avais d’abord développé en Python](https://github.com/Nihirii/Tamagotchi_PY). J’ai choisi d’ajouter la maladie pour donner une priorité aux actions du joueur.
