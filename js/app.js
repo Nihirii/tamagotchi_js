@@ -48,6 +48,8 @@ const submitSetupForm = (e) => {
 
 
 const gameInit = (tama) => {
+    const round = new AbortController();
+    const listenerOptions = { signal: round.signal };
 
     // Cache setup, affiche game
     setup.classList.remove("visible");
@@ -71,52 +73,26 @@ const gameInit = (tama) => {
     /* #endregion */
 
     /* #region  Button click handlers */
-    feed.addEventListener("click", () => {
-        tama.eat();
-
-    });
-
-    drink.addEventListener("click", () => {
-        tama.drink();
-
-    });
-
-    sleep.addEventListener("click", () => {
-        tama.sleep();
-
-    });
-
-    play.addEventListener("click", () => {
-        tama.play();
-    });
-
-    heal.addEventListener("click", () => {
-        tama.heal();
-
-    });
+    feed.addEventListener("click", () => tama.eat(), listenerOptions);
+    drink.addEventListener("click", () => tama.drink(), listenerOptions);
+    sleep.addEventListener("click", () => tama.sleep(), listenerOptions);
+    play.addEventListener("click", () => tama.play(), listenerOptions);
+    heal.addEventListener("click", () => tama.heal(), listenerOptions);
 
     replay.addEventListener("click", () => {
-        if(!tama.alive) {
-
+        if (!tama.alive) {
+            round.abort();
             dead.classList.remove("visible");
             setup.classList.add("visible");
-            renderInterface(tama);
-            
-
         }
+    }, listenerOptions);
 
-    });
-    /* #endregion */
-
-    /* #endregion */
-
+    renderInterface(tama);
     tama.startLife();
 };
 
 const renderInterface = (tama) => {
     // Refresh l'interface
-
-    console.log(tama);
 
     // Update Status bar
     hungerBar.value = tama.hungerMeter;
@@ -124,7 +100,7 @@ const renderInterface = (tama) => {
     sleepBar.value = tama.sleepMeter;
     playBar.value = tama.playMeter;
 
-    // Update img
+    tamaSprite.setAttribute("src", "resources/img/tama_Normal.png");
 
 
     //Update status text
@@ -181,11 +157,8 @@ const renderInterface = (tama) => {
 
         }
 
-        if(problems && problems.length > 0) {
+        if (problems.length > 0) {
             statusText = problems.join("\n");
-        } else {
-            tamaSprite.setAttribute("src","resources/img/tama_Normal.png")
-
         }
 
     } else {
@@ -193,19 +166,19 @@ const renderInterface = (tama) => {
 
         let causes = [];
 
-        if (tama.hungerMeter === 0) {
+        if (tama.hungerMeter <= 0) {
             causes.push("de faim");
         }
 
-        if (tama.thirstMeter === 0) {
+        if (tama.thirstMeter <= 0) {
             causes.push("de soif");
         }
 
-        if (tama.sleepMeter === 0) {
+        if (tama.sleepMeter <= 0) {
             causes.push("d'épuisement");
         }
 
-        if (tama.playMeter === 0) {
+        if (tama.playMeter <= 0) {
             causes.push("d'ennuie");
         }
 
