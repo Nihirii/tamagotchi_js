@@ -2,7 +2,7 @@
 
 Un mini-jeu en JavaScript inspiré des Tamagotchi. Le but est de prendre soin d’un animal virtuel en répondant à ses besoins.
 
-**[Jouer en ligne](https://claude.ai/artifact/JcxbSNqjeYFeHj7duPXHFE)**
+**[Jouer en ligne](https://nihirii.github.io/tamagotchi_js/)**
 
 ![Tama v2 sur ordinateur](screenshots/tama-pc-console.png)
 
