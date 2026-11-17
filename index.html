@@ -4,11 +4,11 @@
 <head>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="theme-color" content="#fbe3f1">
+    <meta name="theme-color" content="#04172b">
     <title>Tama v2</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Pixelify+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/theme.css">
 
     <script src="js/core/Tamagotchi.js"></script>
@@ -20,9 +20,10 @@
 
     <main class="device">
         <div class="ring" aria-hidden="true"></div>
+        <div class="sonar" aria-hidden="true"><i></i><i></i></div>
         <div class="shine" aria-hidden="true"></div>
 
-        <div class="brand">♥ tama ♥</div>
+        <div class="brand">◉ tama·sub</div>
 
         <div class="bezel">
             <div class="screen">
@@ -32,8 +33,8 @@
                     <img class="preview" src="resources/img/tama_Normal.png" alt="">
                     <form class="form" name="setup-form" onsubmit="submitSetupForm(event)">
                         <label for="tama-name">Son petit nom :</label>
-                        <input autocomplete="off" type="text" id="tama-name" placeholder="Mochi" maxlength="12" required>
-                        <input type="submit" class="lcd-btn" id="start-btn" value="Prêt ♥">
+                        <input autocomplete="off" type="text" id="tama-name" placeholder="Bubulle" maxlength="12" required>
+                        <input type="submit" class="lcd-btn" id="start-btn" value="Plonger ›">
                     </form>
                     <button type="button" class="lcd-link" id="rules-open" aria-label="Règles du jeu" title="Règles du jeu">?</button>
 
@@ -70,7 +71,7 @@
                     <div id="death-causes"></div>
                     <img src="resources/img/tama_Mort.png" alt="">
                     <div id="age-of-death"></div>
-                    <button type="button" class="lcd-btn" id="replay-btn">Rejouer ♥</button>
+                    <button type="button" class="lcd-btn" id="replay-btn">Replonger ›</button>
                 </div>
 
             </div>
@@ -101,7 +102,7 @@
     </main>
 
     <div class="mode-switch" role="group" aria-label="Affichage">
-        <button type="button" data-mode="egg" aria-pressed="true">🥚 Tama</button>
+        <button type="button" data-mode="egg" aria-pressed="true">◉ Console</button>
         <button type="button" data-mode="full" aria-pressed="false">⛶ Plein écran</button>
     </div>
 

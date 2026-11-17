@@ -1,14 +1,14 @@
 # Tamagotchi JS
 
-Un mini-jeu en JavaScript inspiré des Tamagotchi. Le but est de prendre soin d’un animal virtuel en répondant à ses besoins.
+Un mini-jeu en JavaScript inspiré des Tamagotchi. Le but est de prendre soin d’un petit requin-baleine virtuel en répondant à ses besoins.
 
 **[Jouer en ligne](https://nihirii.github.io/tamagotchi_js/)**
 
-![Tama v2 sur ordinateur](screenshots/tama-pc-console.png)
+![Accueil, console et plein écran sur téléphone](screenshots/0-apercu.png)
 
 ## Comment jouer
 
-- Nourris ton Tamagotchi et donne-lui à boire.
+- Nourris ton requin-baleine et donne-lui à boire.
 - Fais-le dormir et joue avec lui.
 - S’il tombe malade, soigne-le d’abord. Les autres actions sont bloquées jusqu’à sa guérison.
 
@@ -18,8 +18,18 @@ J’ai réalisé ce projet en trois heures dans le cadre d’un exercice. L’ob
 
 ## Interface
 
-Le jeu prend la forme d’une petite console en œuf, avec un écran LCD et une police pixel. Sur téléphone comme sur ordinateur, un sélecteur permet de jouer dans la console ou en plein écran.
+Le jeu prend la forme d’une console ocean tech : coque bleu abysse au contour néon cyan, écran façon sonar avec ligne de balayage, boutons lumineux et bulles en fond. Sur téléphone comme sur ordinateur, un sélecteur permet de jouer dans la console ou en plein écran.
 
-![Accueil, mode console et mode plein écran sur téléphone](screenshots/tama-mobile-3-ecrans.png)
+![Mode plein écran sur ordinateur](screenshots/4-plein-ecran-desktop.png)
 
-![Mode plein écran sur ordinateur](screenshots/tama-pc-plein-ecran.png)
+<p>
+  <img src="screenshots/2-console.png" width="250" alt="Mode console : le requin-baleine est content">
+  <img src="screenshots/3-plein-ecran-mobile.png" width="250" alt="Plein écran sur téléphone : le requin-baleine a faim">
+  <img src="screenshots/5-fin.png" width="250" alt="Écran de fin">
+</p>
+
+## Émotions
+
+Le requin-baleine change d’expression selon ses jauges : content, faim, soif, fatigué, ennui, malade et mort. Les sources SVG des sprites sont dans `resources/img/src/`.
+
+![Les 7 émotions du requin-baleine](screenshots/6-emotions.png)
